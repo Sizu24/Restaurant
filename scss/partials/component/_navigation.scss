@@ -1,0 +1,47 @@
+#nav{
+    height: 45px;
+    background-color: transparent;
+}
+
+#nav-logo{
+    height: 35px;
+    width: 35px;
+    float: left;
+}
+#nav-links{
+    display: none;
+    list-style: none;
+    text-align: center;
+    color: #fff;
+    font-family: 'Baskervville', serif;
+    @include mq($lg){
+        display: block;
+    }
+    li{
+        display: inline-block;
+        padding: 0 25px;
+        @include mq($xl){
+            padding: 0 80px;
+        }
+    }
+
+}
+#hamburger {
+    z-index: 1;
+    float: right;
+    max-width: 70px;
+    list-style: none;
+    color: #fff;
+    margin: 15px;
+    .line{
+        border-top: 2px solid #fff;
+        padding: 3px;
+        width: 15px;
+    }
+    @include mq($lg){
+        display: none;
+    }
+}
+.hide{
+    display: none;
+}
