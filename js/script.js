@@ -7,6 +7,6 @@ window.addEventListener("click", e =>{
     }
 })
 
-window.addEventListener("load", e =>{
-    $("#main-items").animate({"opacity": "1"}, 2500);
+window.addEventListener("load", () =>{
+    $("#main-items").animate({"opacity": "1"}, 3000);
 });
