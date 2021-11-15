@@ -337,6 +337,10 @@ template {
   display: none;
 }
 
+#main-items {
+  opacity: 0;
+}
+
 h1 {
   font-size: 1.6em;
   margin: 0;
