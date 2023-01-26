@@ -1,0 +1,15 @@
+// Globals
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+@import 'vendor/normalize';
+@import 'vendor/wordpress';
+
+// Components
+@import 'components/site-header'; 
+@import 'components/home'; 
+@import 'components/button'; 
+@import 'components/nav'; 
+@import 'components/footer'; 
+
+@import 'globals';
