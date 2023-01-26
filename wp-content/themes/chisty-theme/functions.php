@@ -55,6 +55,7 @@
       // styles
       $version = wp_get_theme()->get('Version'); //Updates version from style.css
       wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap', false ); 
+      wp_enqueue_style( 'wpb-google-fonts', 'https://use.typekit.net/yme5rxe.css', false );
 
       wp_enqueue_style('main', get_template_directory_uri() . '/dist/styles/main.css', [], $version, 'all');
 
