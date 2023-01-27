@@ -3,9 +3,9 @@
 ?>
 
 <div class="site-header">
-  <div class="site-header__logo">
+  <a class="site-header__logo">
     <i class="fas fa-utensils"></i>
-  </div>
+  </a>
 
   <nav class="site-header__nav nav">
     <div class="nav__hamburger js-nav-open">

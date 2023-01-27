@@ -1,10 +1,7 @@
 <div class="text-media">
   <div class="text-media__container">
-    <div class="text-media__media-content">
-      <img class="text-media__image" src="" alt="">
-    </div>
     <div class="text-media__text-content">
-      <p class="text-media__subheading">
+      <p class="text-media__eyebrow">
         Our ingredients are made from scratch
       </p>
       <h2 class="text-media__heading">
@@ -15,6 +12,9 @@
         Mattis vulputate enim nulla aliquet porttitor lacus.
         Cursus mattis molestie a iaculis at erat pellentesque.
       </div>
+    </div>
+    <div class="text-media__media-content">
+      <img class="text-media__image" src="/wp-content/themes/chisty-theme/src/assets/images/pexels-flo-dahm-1137473.jpg" alt="">
     </div>
   </div>
 </div>
