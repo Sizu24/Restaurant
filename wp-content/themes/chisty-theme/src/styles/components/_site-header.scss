@@ -1,9 +1,11 @@
 .site-header {
-
+  display: flex;
+  justify-content: space-between;
 }
 
 .site-header__logo {
-
+  padding: 18px 10px;
+  color: #fff;
   img {
       max-width: 200px;
   }

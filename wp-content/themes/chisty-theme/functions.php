@@ -3,7 +3,6 @@
  * Functions
  */
 
-
  if (! function_exists('chistyTheme_setup')) {
 
   function chistyTheme_setup() {
@@ -54,8 +53,8 @@
     function chistyTheme_public_scripts() {
       // styles
       $version = wp_get_theme()->get('Version'); //Updates version from style.css
-      wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap', false ); 
-      wp_enqueue_style( 'wpb-google-fonts', 'https://use.typekit.net/yme5rxe.css', false );
+      wp_enqueue_style( 'baskervville-google-fonts', 'https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap', false ); 
+      wp_enqueue_style( 'adelle', 'https://use.typekit.net/yme5rxe.css', false );
 
       wp_enqueue_style('main', get_template_directory_uri() . '/dist/styles/main.css', [], $version, 'all');
 
@@ -63,6 +62,29 @@
       wp_enqueue_script('main', get_template_directory_uri() . '/dist/scripts/main.js', ['jquery'], wp_rand(), true);
     }
     add_action('wp_enqueue_scripts', 'chistyTheme_public_scripts');
+
+    /**
+     * Font Awesome Kit Setup
+     * 
+     * This will add your Font Awesome Kit to the front-end, the admin back-end,
+     * and the login screen area.
+     */
+    if (! function_exists('fa_custom_setup_kit') ) {
+      function fa_custom_setup_kit($kit_url = '') {
+        foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts', 'login_enqueue_scripts' ] as $action ) {
+          add_action(
+            $action,
+            function () use ( $kit_url ) {
+              wp_enqueue_script( 'font-awesome-kit', $kit_url, [], null );
+            }
+          );
+        }
+      }
+    }
+
+    fa_custom_setup_kit('https://kit.fontawesome.com/67a4a7bccc.js');
+
+
   }
 
   function chistyTheme_admin_scripts() {

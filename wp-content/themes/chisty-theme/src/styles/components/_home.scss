@@ -24,7 +24,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px;
+  padding-top: 60px;
+
+  @include media($xl) {
+    padding-top: 250px;
+  }
 }
 
 .home-hero__figure {

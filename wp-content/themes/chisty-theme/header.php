@@ -13,5 +13,6 @@
     <?php wp_head(); ?>
   </head>
 <body <?php body_class(); ?>
+<div class="container">
   <?php get_template_part('template-parts/site-header', ''); ?>
     <main class="main">
