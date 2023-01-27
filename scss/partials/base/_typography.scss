@@ -4,22 +4,22 @@
 h1{
     font-size: 1.6em;
     margin: 0;
-    @include mq($md){
+    @include media('>=small'){
         font-size: 2.2em;
     }
-    @include mq($lg){
+    @include media('>=medium'){
         font-size: 4.2em;
     }
-    @include mq($xl){
+    @include media('>=large'){
         font-size: 5em;
     }
-    @include mq($xxl){
+    @include media('>=x-large'){
         padding-top: 200px;
     }
 }
 h2{
     font-size: 0.8em;
-    @include mq($lg){
+    @include media('>=large'){
         font-size: 1.8em;
     }
 

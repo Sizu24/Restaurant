@@ -1,0 +1,12 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-header__logo {
+  padding: 18px 32px;
+  color: #fff;
+  &:hover {
+    cursor: pointer;
+  }
+}

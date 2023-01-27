@@ -1,0 +1,85 @@
+.text-media {
+  padding: 48px;
+  background: $color-white;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: -150px;
+    right: -130px;
+    width: 49em;
+    aspect-ratio: 1 / 1;
+    -webkit-mask-position: center right;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-image: url('../assets/accents/bg-accent.svg');
+    background: $color-green-dark;
+    transition: transform 0.1s ease;
+  }
+}
+
+.text-media__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80rem;
+}
+
+.text-media__media-content {
+  display: flex;
+  justify-content: space-between;
+  flex: 0 1 700px;
+  margin-left: 3rem;
+  z-index: 1;
+}
+
+.text-media__image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.text-media__text-content {
+  flex: 0 1 580px;
+  z-index: 1;
+}
+
+.text-media__eyebrow {
+  font-family: $ff-proxima;
+  font-size: 24px;
+  margin: 0;
+  color: $color-orange;
+}
+
+.text-media__heading {
+  font-family: $ff-baskervville;
+  font-size: 3.5rem;
+  color: $color-black;
+  margin-top: 24px;
+}
+
+.text-media__rich-text {
+  font-family: $ff-proxima;
+  font-size: 20px;
+  color: $color-black;
+  margin-bottom: 50px;
+}
+
+.text-media__button {
+  display: inline-block;
+  background-color: $color-green-dark;
+  color: $color-white;
+  border: 2px solid $color-green-dark;
+  text-decoration: none;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-green-dark;
+    transition: all 0.5s;
+  }
+}

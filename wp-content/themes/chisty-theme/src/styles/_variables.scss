@@ -1,0 +1,36 @@
+// Colors
+$color-white: #ffffff;
+$color-light: #f6f6f6;
+$color-black: #000000;
+$color-green: #1ee494;
+$color-green-dark: #009378;
+$color-orange: #fc8a15;
+
+// Font weights
+$fw-light: 300;
+$fw-regular: 400;
+$fw-normal: $fw-regular; // alias
+$fw-book: $fw-regular;   // alias
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+// Fonts
+$ff-baskervville: 'Baskervville', serif;
+$ff-proxima: 'proxima-nova', sans-serif;
+
+// Media query sizes
+$base: 320px;
+$xs: 480px;
+$sm: 768px;
+$smd: 1024px;
+$md: 1280px;
+$lg: 1440px;
+$xl: 1600px;
+
+$unit-intervals: (
+  'px': 1,
+  'em': .0625,
+  'rem': .0625,
+  '': 0
+);
