@@ -12,5 +12,9 @@
 @import 'components/nav'; 
 @import 'components/site-footer'; 
 @import 'components/text-media'; 
+@import 'components/slider';
 
 @import 'globals';
+
+// vendor
+@import 'swiper/css';
