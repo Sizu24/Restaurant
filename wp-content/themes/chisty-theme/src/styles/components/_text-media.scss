@@ -1,46 +1,57 @@
 .text-media {
-  padding: 48px;
-  background: $color-white;
+  padding: 25px;
+  background: $color-beige-light;
   position: relative;
   overflow: hidden;
 
-  &::after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: -150px;
-    right: -130px;
-    width: 49em;
-    aspect-ratio: 1 / 1;
-    -webkit-mask-position: center right;
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-image: url('../assets/accents/bg-accent.svg');
-    background: $color-green-dark;
-    transition: transform 0.1s ease;
+  @include media($md) {
+    padding: 60px 48px;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: -150px;
+      right: 0;
+      width: 60%;
+      aspect-ratio: 1 / 1;
+      transform: translateX(25%);
+      -webkit-mask-position: center right;
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-image: url('../assets/accents/bg-accent.svg');
+      background: $color-green;
+    }
   }
 }
 
 .text-media__container {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 80rem;
+  max-width: 80rem;
+  width: 100%;
+
+  @include media($sm) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
 }
 
 .text-media__media-content {
-  display: flex;
-  justify-content: space-between;
-  flex: 0 1 700px;
-  margin-left: 3rem;
+  margin: 30px 0;
   z-index: 1;
+
+  @include media($sm) {
+    width: 50%;
+    margin-left: 3rem;
+  }
 }
 
 .text-media__image {
   display: block;
   width: 100%;
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .text-media__text-content {
@@ -52,29 +63,33 @@
   font-family: $ff-proxima;
   font-size: 24px;
   margin: 0;
-  color: $color-orange;
+  color: $color-brown;
 }
 
 .text-media__heading {
-  font-family: $ff-baskervville;
-  font-size: 3.5rem;
-  color: $color-black;
+  font-family: $ff-satisfy;
+  font-size: 2.5rem;
+  color: $color-green;
   margin-top: 24px;
+  margin-bottom: 20px;
+
+  @include media($sm) {
+    font-size: 3.5rem;
+  }
 }
 
-.text-media__rich-text {
+.text-media__body {
   font-family: $ff-proxima;
   font-size: 20px;
   color: $color-black;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
-.text-media__button {
+.text-media__link {
   display: inline-block;
   background-color: $color-green-dark;
   color: $color-white;
   border: 2px solid $color-green-dark;
-  text-decoration: none;
   transition: all 0.5s;
 
   &:hover {

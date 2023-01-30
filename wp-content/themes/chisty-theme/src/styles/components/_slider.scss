@@ -1,3 +1,130 @@
 .slider {
-  
+  padding: 25px;
+  // background: $color-light;
+  background: transparent;
+
+  @include media($sm) {
+    padding: 60px 48px;
+  }
+}
+
+.slider__eyebrow {
+
+}
+
+.slider__heading {
+  margin-top: 0;
+  margin-bottom: 75px;
+  font-size: 2.5rem;
+  // color: $color-green;
+  color: $color-white;
+
+  @include media($sm) {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+}
+
+.slider__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media($sm) {
+    flex-direction: row;
+  }
+}
+
+.slider__text {
+
+
+  @include media($sm) {
+    width: 25%;
+  }
+}
+
+.slider__title {
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-family: $ff-proxima;
+  font-size: 2rem;
+  line-height: 1;
+  color: $color-white;
+
+  @include media($sm) {
+    font-size: 3rem;
+  }
+}
+
+.slider__body {
+  font-family: $ff-proxima;
+  font-size: 20px;
+  // color: $color-black;
+  color: $color-white;
+  margin-bottom: 30px;
+}
+
+.slider__button {
+  display: inline-block;
+  margin-bottom: 50px;
+  background-color: transparent;
+  // color: $color-green-dark;
+  color: $color-white;
+  // border: 2px solid $color-green-dark;
+  border: 2px solid $color-white;
+  text-decoration: none;
+  transition: all 0.5s;
+
+  &:hover {
+    // background-color: $color-green-dark;
+    background-color: $color-green-dark;
+    border: 2px solid $color-green-dark;
+    color: $color-white;
+    transition: all 0.5s;
+  }
+}
+
+.slider__swiper {
+  background-color: transparent;
+}
+
+.slider__background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../assets/images/milkshake.jpg');
+}
+
+.slider__wrapper {
+  height: auto;
+}
+
+.slider__slide {
+  max-width: 400px;
+  height: auto;
+}
+
+.slider__slider div > {
+  height: auto;
+}
+
+.slider__image {
+  border-radius: 10px;
+}
+
+.slider__image-description {
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
+  color: $color-white;
+  padding-left: 25px;
+
+  @include media($sm) {
+    bottom: 100px;
+  }
 }

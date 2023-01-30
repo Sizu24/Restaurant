@@ -1,6 +1,6 @@
 function fadeInPage() {
   window.addEventListener("load", () =>{
-    $(".home").animate({"opacity": "1"}, 3000);
+    // $(".home").animate({"opacity": "1"}, 3000);
   });
 }
 

@@ -6,6 +6,8 @@
   background-image: url("/dist/assets/images/pexels-ray-piedra-1565982.jpg");
   z-index: -1;
   top: 0;
+  margin: 0 auto;
+  max-width: 1920px;
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -24,10 +26,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 25px;
 
   @include media($xl) {
-    padding-top: 250px;
+    // padding-top: 250px;
   }
 }
 
@@ -44,7 +46,7 @@
 
 .home-hero__title {
   margin-top: 15px;
-  margin-bottom: 34px;
+  margin-bottom: 20px;
   color: $color-white;
 }
 

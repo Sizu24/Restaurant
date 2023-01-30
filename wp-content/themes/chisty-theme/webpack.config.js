@@ -16,6 +16,8 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {from: 'src/assets/images/', to: 'assets/images'},
+        {from: 'src/assets/accents/', to: 'assets/accents'},
+        {from: 'src/assets/fonts/', to: 'assets/fonts'},
       ],
     }),
   ],
@@ -42,6 +44,10 @@ module.exports = {
         options: {
           name: '/assets/images/[name].[ext]',
         }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'assets/fonts',
       },
     ],
   },

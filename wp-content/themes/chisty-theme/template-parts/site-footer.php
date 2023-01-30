@@ -2,7 +2,7 @@
   <div class="site-footer__container">
 
     <figure src="" alt="" class="site-footer__logo">
-      <img src="img/veggiew.png" alt="black and white vegetable icon">
+      <img src="/wp-content/themes/chisty-theme/dist/assets/images/veggiew.png" alt="black and white vegetable icon">
     </figure>
 
     <div class="site-footer__nav">
