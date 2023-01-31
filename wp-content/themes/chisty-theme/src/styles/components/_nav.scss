@@ -1,38 +1,64 @@
 .nav {
   padding: 10px 0;
+  display: none;
 
   @include media($sm) {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.nav--mobile {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  background-color: $color-green-dark;
+  transform: translateX(100vw);
+  transition: all 200ms ease-in;
+  padding-top: 50px;
+
+  @include media($md) {
+    display: none;
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+    transition: all 200ms ease-in;
   }
 }
 
 .nav__links {
-  display: none;
   list-style: none;
   text-align: center;
-  color: $color-white;
   font-family: $ff-proxima;
 
   @include media($sm) {
-    display: block;
+    display: flex;
     margin: 0;
   }
 }
 
 .nav__links--mobile {
-
-  @include media($sm) {
-    display: none;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
 .nav__links-item {
-  display: inline-block;
-  padding: 0 25px;
-  
-  @include media($lg) {
-    padding: 0 45px;
-  }
+  transition: background-color 0.5s;
+  margin: 0 80px;
 
   a {
     display: inline-block;
@@ -48,8 +74,6 @@
       color: $color-white;
     }
 
-    transition: background-color 0.5s;
-
     &:hover {
       background-color: $color-green-dark;
       color: $color-white;
@@ -59,13 +83,38 @@
   }
 }
 
+.nav__links-item--mobile {
+  position: relative;
+  margin: 0;
+  a {
+    display: inline-block;
+    width: 100%;
+    padding: 25px 0px;
+    border-radius: 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+  
+    &:hover {
+      background-color: $color-green;
+      border: none;
+      transition: all 0.5s;
+    }
+  }
+
+}
+
 .nav__hamburger {
-  z-index: 1;
-  float: right;
-  max-width: 70px;
-  list-style: none;
-  color: $color-white;
+  position: absolute;
+  top: 0;
+  right: 0;
   padding: 15px;
+  max-width: 70px;
+  z-index: 1;
+  color: $color-white;
 
   .line {
     border-top: 2px solid $color-white;
@@ -80,8 +129,4 @@
   &:hover {
     cursor: pointer;
   }
-}
-
-.hide {
-  display: none;
 }

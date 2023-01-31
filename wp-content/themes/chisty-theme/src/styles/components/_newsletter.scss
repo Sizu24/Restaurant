@@ -10,7 +10,16 @@
 }
 
 .newsletter__heading {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+
+  @include media($sm) {
+    font-size: 3.5rem;
+  }
+}
+
+.newsletter__subhead {
+  margin-bottom: 24px;
 }
 
 .newsletter__signup {
@@ -22,12 +31,17 @@
 }
 
 .newsletter__form-email {
-  width: 40%;
+  width: 65%;
   padding: 17px;
+  margin-bottom: 12px;
   border: none;
   border-radius: 5px;
   background-color: #d2d2d2;
   box-shadow: 5px 22px 42px -15px rgb(178 178 178);
+
+  @include media($sm) {
+    width: 40%;
+  }
 }
 
 .newsletter__scroll {

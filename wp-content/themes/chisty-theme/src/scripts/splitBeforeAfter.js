@@ -3,6 +3,8 @@ function splitBeforeAfter() {
   const sliderButton = document.querySelector('.js-split-button');
   const afterImage = document.querySelector('.js-split-after');
   const afterTitle = document.querySelector('.js-title-after');
+
+  if (!slider) return;
   
   slider.addEventListener('input', (e) => {
     let sliderPosition = e.target.value;
