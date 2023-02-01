@@ -1,7 +1,3 @@
-<?php
- /* Template Name: Site Header */ 
-?>
-
 <div class="site-header">
   <div class="site-header__content">
     <a class="site-header__logo">

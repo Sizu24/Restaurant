@@ -1,19 +1,21 @@
 .site-header {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
 
   @include media($sm) {
     display: flex;
+    max-width: 1920px;
   }
 }
 
 .site-header__content {
-  position: sticky;
   z-index: 3;
   padding: 20px 0;
 }
 
 .site-header__nav {
-  position: fixed;
   z-index: 2;
   width: 100%;
 
@@ -23,9 +25,7 @@
 }
 
 .site-header__logo {
-  position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 1;
   padding: 16px 32px;
   color: #fff;
 
