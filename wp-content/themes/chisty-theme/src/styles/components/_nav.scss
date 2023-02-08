@@ -19,7 +19,7 @@
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
-  background-color: $color-green-dark;
+  background-color: $color-white;
   transform: translateX(100vw);
   transition: all 200ms ease-in;
   padding-top: 50px;
@@ -67,11 +67,11 @@
     border-radius: 5px;
 
     &:link {
-      color: $color-white;
+      color: $color-black;
     }
 
     &:visited {
-      color: $color-white;
+      color: $color-black;
     }
 
     &:hover {
@@ -86,10 +86,13 @@
 .nav__links-item--mobile {
   position: relative;
   margin: 0;
+  text-align: left;
+  border-bottom: 0.5px solid $color-green-dark;
+
   a {
     display: inline-block;
     width: 100%;
-    padding: 25px 0px;
+    padding: 25px;
     border-radius: 0;
 
     &:before {
@@ -113,11 +116,11 @@
   right: 0;
   padding: 15px;
   max-width: 70px;
-  z-index: 1;
-  color: $color-white;
+  z-index: 3;
+  color: $color-black;
 
   .line {
-    border-top: 2px solid $color-white;
+    border-top: 2px solid $color-black;
     padding: 3px;
     width: 25px;
   }

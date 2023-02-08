@@ -7,16 +7,75 @@
 
   function chistyTheme_setup() {
 
+    $post_type = 'food-menu';
+    $singular = 'Food Menu';
+    $plural = 'Food Menus';
+    $plural_lower = strtolower($plural);
+    $args = [
+      'labels' => [
+        'name' => _x($plural, 'Post type general name'),
+        'singular_name' => _x($singular, 'Post type singular name'),
+        'menu_name' => _x($plural, 'Admin Menu text'),
+        'name_admin_bar' => _x($singular, 'Add New on Toolbar'),
+        'add_new' => __('Add New'),
+        'add_new_item' => __("Add New $singular"),
+        'new_item' => __("New $singular"),
+        'edit_item' => __("Edit $singular"),
+        'view_item' => __("View $singular"),
+        'all_items' => __("All $plural"),
+        'search_items' => __("Search $plural"),
+        'parent_item_colon' => __("Parent $singular:"),
+        'not_found' => __("No $plural_lower found."),
+        'not_found_in_trash' => __("No $plural_lower found in Trash."),
+      ],
+      'public' => true,
+      'publicly_queryable' => true,
+      'show_ui' => true,
+      'show_in_menu' => true,
+      'query_var' => true,
+      'rewrite' => ['slug' => $plural_lower, 'with_front' => false],
+      'capability_type' => 'post',
+      'has_archive' => true,
+      'hierarchical' => false,
+      'menu_position' => null,
+      'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+    ];
+    register_post_type($post_type, $args);
+    add_action('init', 'register_post_type');
+
+    $taxonomy_name = 'entrees';
+    $post_types = ['food-menu'];
+    $singular = 'Entree';
+    $plural = 'Entrees';
+    $plural_lower = strtolower($plural);
+    $args = [
+      'labels' => [
+        'name' => _x($plural, 'taxonomy general name'),
+        'singular_name' => _x($singular, 'taxonomy singular name'),
+        'search_items' => __("Search $plural"),
+        'all_items' => __("All $plural"),
+        'parent_item' => __("Parent $singular"),
+        'parent_item_colon' => __("Parent $singular:"),
+        'edit_item' => __("Edit $singular"),
+        'update_item' => __("Update $singular"),
+        'add_new_item' => __("Add New $singular"),
+        'new_item_name' => __("New $singular Name"),
+        'menu_name' => __($plural),
+      ],
+      'hierarchical' => true,
+      'show_ui' => true,
+      'show_admin_column' => true,
+      'query_var' => true,
+      'rewrite' => ['slug' => $plural_lower],
+      'show_in_rest' => true,
+    ];
+    register_taxonomy($taxonomy_name, $post_types, $args);
+
     load_theme_textdomain('Chisty', get_template_directory() . '/languages');
-
     add_theme_support('automatic-feed-links');
-
     add_theme_support('title-tag');
-
     add_theme_support('post-thumbnails');
-
     add_theme_support('customize-selective-refresh-widgets');
-
     add_theme_support('html5', array(
       'search-form',
       'comment-form',
@@ -82,8 +141,8 @@
         }
       }
     }
-
     fa_custom_setup_kit('https://kit.fontawesome.com/67a4a7bccc.js');
+
 
 
   }

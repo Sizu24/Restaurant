@@ -2,7 +2,10 @@
   display: flex;
   justify-content: space-between;
   position: sticky;
+  background-color: $color-white;
   top: 0;
+  box-shadow: rgb(0 0 0 / 25%) 0px 0.25rem 0.625rem;
+  z-index: 3;
 
   @include media($sm) {
     display: flex;
@@ -11,7 +14,6 @@
 }
 
 .site-header__content {
-  z-index: 3;
   padding: 20px 0;
 }
 
@@ -27,7 +29,7 @@
 .site-header__logo {
   z-index: 1;
   padding: 16px 32px;
-  color: #fff;
+  color: #000;
 
   &:hover {
     cursor: pointer;

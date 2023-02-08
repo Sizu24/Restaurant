@@ -1,6 +1,7 @@
+
 <div class="site-header">
   <div class="site-header__content">
-    <a class="site-header__logo">
+    <a class="site-header__logo" href="<?= home_url() ?>">
       <i class="fas fa-utensils"></i>
     </a>
 

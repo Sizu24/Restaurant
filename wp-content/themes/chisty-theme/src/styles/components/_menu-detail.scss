@@ -1,0 +1,32 @@
+.menu-detail {
+
+}
+
+.menu-detail__container {
+  display: flex;
+  flex-direction: column;
+
+  @include media($sm) {
+    flex-direction: row;
+    padding: 50px 80px;
+  }
+}
+
+.menu-detail__image {
+
+  img {
+    border-radius: none;
+    
+    @include media($sm) {
+      border-radius: 20px;
+    }
+  }
+}
+
+.menu-detail__content {
+  padding: 30px 20px;
+
+  @include media($sm) {
+    padding: 100px;
+  }
+}

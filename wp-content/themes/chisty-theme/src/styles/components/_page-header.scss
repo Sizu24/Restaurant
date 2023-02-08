@@ -1,0 +1,16 @@
+.page-header {
+  background-color: $color-green;
+  padding: 25px 20px;
+
+  @include media($sm) {
+    padding: 60px 48px;
+  }
+}
+
+.page-header__title {
+  color: $color-white;
+}
+
+.page-header__subhead {
+  
+}
