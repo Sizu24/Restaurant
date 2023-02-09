@@ -1,0 +1,94 @@
+.archive {
+
+}
+
+.archive-container {
+  display: flex;
+  flex-direction: column;
+
+  @include media($sm) {
+    flex-direction: row;
+  }
+}
+
+.archive-sidebar {
+  max-width: 400px;
+  padding: 25px;
+}
+
+.archive__filter {
+  width: 100%;
+  list-style: none;
+}
+
+.archive-filter__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.archive-filter__label {
+  display: flex;
+  padding: 5px;
+}
+
+.archive-filter__checkbox {
+
+}
+
+.archive-filter__checkbox-title {
+  margin-left: 8px;
+}
+
+.archive-filter__submit {
+  margin-top: 50px;
+  background-color: transparent;
+  border: 2px solid $color-green-dark;
+  color: $color-green-dark;
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: $color-green-dark;
+    color: $color-white;
+    border-color: $color-green-dark;
+    transition: all 0.5s;
+  }
+}
+
+.archive-posts {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  padding: 25px;
+}
+
+.archive__card {
+  width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: $color-beige-light;
+  text-decoration: none;
+
+  &:link {
+    color: $color-black;
+  }
+
+  &:visited {
+    color: $color-black;
+  }
+}
+
+.archive__card-image {
+  width: 100%;
+}
+
+.archive__card-content {
+  padding: 20px;
+}
+
+.archive__card-title {
+  
+}
+
+.archive__card-description {
+  
+}

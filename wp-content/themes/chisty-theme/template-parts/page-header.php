@@ -1,4 +1,10 @@
+<?php 
+  $categories = get_the_terms($post->ID, 'menu-categories');
+?>
+
 <div class="page-header">
-  <h1 class="page-header__title"><?= get_terms('entrees')[0]->name ?></h1>
+    <?php foreach($categories as $category) : ?>
+      <h1 class="page-header__title"><?= $category->name ?></h1>
+    <?php endforeach; ?>
   <p class="page-header__subhead"></p>
 </div>

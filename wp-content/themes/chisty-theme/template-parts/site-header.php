@@ -17,7 +17,7 @@
     <nav class="nav">
       <ul class="nav__links">
         <li class="nav__links-item"><a href="<?= home_url() ?>">Home</a></li>
-        <li class="nav__links-item"><a href="<?= get_permalink(31) ?>">Menu</a></li>
+        <li class="nav__links-item"><a href="/food-menu">Menu</a></li>
         <li class="nav__links-item"><a href="">About</a></li>
         <li class="nav__links-item"><a href="">Contact</a></li>
       </ul>

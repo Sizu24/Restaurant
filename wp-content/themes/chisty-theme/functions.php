@@ -9,7 +9,7 @@
 
     $post_type = 'food-menu';
     $singular = 'Food Menu';
-    $plural = 'Food Menus';
+    $plural = 'Food Menu';
     $plural_lower = strtolower($plural);
     $args = [
       'labels' => [
@@ -33,7 +33,7 @@
       'show_ui' => true,
       'show_in_menu' => true,
       'query_var' => true,
-      'rewrite' => ['slug' => 'Menu', 'with_front' => false],
+      'rewrite' => ['slug' => $post_type, 'with_front' => false],
       'capability_type' => 'post',
       'has_archive' => true,
       'hierarchical' => false,
@@ -43,7 +43,7 @@
     register_post_type($post_type, $args);
     add_action('init', 'register_post_type');
 
-    $taxonomy_name = 'Menu Categories';
+    $taxonomy_name = 'menu-categories';
     $post_types = ['food-menu'];
     $singular = 'Menu Category';
     $plural = 'Menu Categories';
