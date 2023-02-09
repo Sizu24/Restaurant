@@ -1,6 +1,6 @@
 <?php 
 /**
- *  Template: Menu Items.
+ *  Template: Food Menu.
  */
 ?>
 
