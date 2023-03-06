@@ -10,7 +10,7 @@
         <p class="slider__body">
           We specialize in veggie burgers, but we also have sandwiches, shakes, appetizers. and desserts. No matter what you're craving, we got you.
         </p>
-        <a class="slider__button button" href="">See Menu</a>
+        <a class="slider__button button" href="/food-menu">See Menu</a>
       </div>
       <!-- Slider main container -->
       <div class="swiper slider__swiper">

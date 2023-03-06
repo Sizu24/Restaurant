@@ -15,6 +15,6 @@
       </figure>
       <h1 class="home-hero__title">Veronica's Veggie Burgers</h1>
       <h2 class="home-hero__description">Healthy never tasted this good!</h2>
-      <button class="home-hero__button button">Menu</button>
+      <a class="home-hero__button button" href="/food-menu">Menu</a>
     </div>
 </div>

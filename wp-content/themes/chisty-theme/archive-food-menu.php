@@ -1,13 +1,16 @@
 <?php
 /* Template Name: Food Menu Archive */
 
+  $categories = [];
   $categories = get_terms([
     'taxonomy' => 'menu-categories',
     'hide_empty' => false
   ]);
 
-  $checkedList = [];
-  $checkedList = $_GET['menu-categories'];
+  $checked = [];
+  if (isset($_GET['menu-categories'])) {
+    $checked = $_GET['menu-categories'];
+  };
 ?>
 
 <?php get_header(); ?>
@@ -25,7 +28,7 @@
             <?php foreach($categories as $category) : ?>
               <label class="archive-filter__label" for="checkbox">
                 <input class="archive-filter__checkbox" id="checkbox" type="checkbox" value="<?= $category->slug ?>" name="menu-categories[]"
-                  <?php if (in_array($category->slug, $checkedList)) : echo checked; endif; ?>
+                <?php checked(in_array($category->slug, $checked)); ?>
                 >
                 <span class="archive-filter__checkbox-title"><?= $category->name ?></span>
               </label>
