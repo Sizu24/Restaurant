@@ -1,4 +1,3 @@
-
 <div class="site-header">
   <div class="site-header__content">
     <a class="site-header__logo" href="<?= home_url() ?>">
@@ -19,7 +18,7 @@
         <li class="nav__links-item"><a href="<?= home_url() ?>">Home</a></li>
         <li class="nav__links-item"><a href="/food-menu">Menu</a></li>
         <li class="nav__links-item"><a href="">About</a></li>
-        <li class="nav__links-item"><a href="">Contact</a></li>
+        <li class="nav__links-item"><a href="/contact-us">Contact</a></li>
       </ul>
     </nav>
 
