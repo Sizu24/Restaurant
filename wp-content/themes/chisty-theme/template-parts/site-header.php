@@ -24,10 +24,10 @@
 
     <nav class="nav nav--mobile js-nav-drawer">
       <ul class="nav__links nav__links--mobile">
-        <li class="nav__links-item nav__links-item--mobile"><a href="">Home</a></li>
-        <li class="nav__links-item nav__links-item--mobile"><a href="">Menu</a></li>
+        <li class="nav__links-item nav__links-item--mobile"><a href="<?= home_url() ?>">Home</a></li>
+        <li class="nav__links-item nav__links-item--mobile"><a href="/food-menu">Menu</a></li>
         <li class="nav__links-item nav__links-item--mobile"><a href="">About</a></li>
-        <li class="nav__links-item nav__links-item--mobile"><a href="">Contact</a></li>
+        <li class="nav__links-item nav__links-item--mobile"><a href="/contact-us">Contact</a></li>
       </ul>
     </nav>
   </div>
