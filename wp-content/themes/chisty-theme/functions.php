@@ -110,7 +110,11 @@
     ]);
 
     function chistyTheme_public_scripts() {
-      // styles
+
+      // Google maps API Key
+      $apiKey = 'AIzaSyD4aWYLz2H8Uj01k-nAms54leSannJEDhA';
+
+      // Styles
       $version = wp_get_theme()->get('Version'); //Updates version from style.css
       wp_enqueue_style( 'baskervville-google-fonts', 'https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap', false ); 
       wp_enqueue_style( 'satisfy-google-fonts', 'https://fonts.googleapis.com/css2?family=Satisfy&display=swap', false ); 
@@ -118,8 +122,16 @@
 
       wp_enqueue_style('main', get_template_directory_uri() . '/dist/styles/main.css', [], $version, 'all');
 
-      // scripts
+      // Scripts
       wp_enqueue_script('main', get_template_directory_uri() . '/dist/scripts/main.js', ['jquery'], wp_rand(), true);
+      wp_enqueue_script(
+        'maps', 
+        'https://maps.googleapis.com/maps/api/js?key=' . $apiKey . '&callback=initMap&v=weekly',
+        ['jquery'],
+        wp_rand(),
+        true,
+        'print'
+      );
     }
     add_action('wp_enqueue_scripts', 'chistyTheme_public_scripts');
 
@@ -142,9 +154,6 @@
       }
     }
     fa_custom_setup_kit('https://kit.fontawesome.com/67a4a7bccc.js');
-
-
-
   }
 
   function chistyTheme_admin_scripts() {
@@ -155,3 +164,4 @@
  }
 
 add_action('after_setup_theme', 'chistyTheme_setup');
+

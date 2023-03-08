@@ -57,8 +57,9 @@
 }
 
 .site-footer__contact {
+  display: flex;
+  flex-direction: column;
   margin-top: 30px;
-  display: block;
   text-align: center;
 
   @include media($sm) {
@@ -67,10 +68,12 @@
 }
 
 .site-footer__contact-title {
+  margin-top: 10px;
   color: $color-white;
 }
 
 .site-footer__contact-number {
+  padding-bottom: 10px;
   color: $color-white;
   text-decoration: none;
 }
@@ -85,6 +88,7 @@
 }
 
 .site-footer__social-title {
+  margin-top: 10px;
   color: $color-white;
 }
 

@@ -1,0 +1,73 @@
+.locations {
+  display: flex;
+  flex-direction: column;
+
+  @include media($sm) {
+    flex-direction: row;
+    padding: 25px;
+  }
+}
+
+.locations__content {
+  padding: 25px;
+  background-color: $color-beige-light;
+
+  @include media($sm) {
+    position: sticky;
+    top: 0;
+    width: 40%;
+  }
+}
+
+.locations__title {
+
+}
+
+.locations__list {
+  padding: 0;
+  list-style: none;
+}
+
+.locations__list-item {
+  padding: 10px 0;
+
+  a {
+    text-decoration: none;
+
+    &:link {
+      color: $color-black;
+    }
+  
+    &:visited {
+      color: $color-black;
+    }
+  }
+}
+
+.locations__maps {
+  background-color: $color-beige-light;
+  color: $color-black;
+  text-align: center;
+
+  @include media($sm) {
+    width: 60%;
+  }
+}
+
+.locations__map {
+  height: 400px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.locations__map-title {
+
+}
+
+.locations__map-hours {
+
+}
+
+.locations__map-address {
+
+}

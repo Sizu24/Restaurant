@@ -17,7 +17,7 @@
       <ul class="nav__links">
         <li class="nav__links-item"><a href="<?= home_url() ?>">Home</a></li>
         <li class="nav__links-item"><a href="/food-menu">Menu</a></li>
-        <li class="nav__links-item"><a href="">About</a></li>
+        <li class="nav__links-item"><a href="/locations">Locations</a></li>
         <li class="nav__links-item"><a href="/contact-us">Contact</a></li>
       </ul>
     </nav>
@@ -26,7 +26,7 @@
       <ul class="nav__links nav__links--mobile">
         <li class="nav__links-item nav__links-item--mobile"><a href="<?= home_url() ?>">Home</a></li>
         <li class="nav__links-item nav__links-item--mobile"><a href="/food-menu">Menu</a></li>
-        <li class="nav__links-item nav__links-item--mobile"><a href="">About</a></li>
+        <li class="nav__links-item nav__links-item--mobile"><a href="/locations">Locations</a></li>
         <li class="nav__links-item nav__links-item--mobile"><a href="/contact-us">Contact</a></li>
       </ul>
     </nav>
