@@ -112,8 +112,7 @@
     function chistyTheme_public_scripts() {
 
       // Google maps API Key
-      $apiKey = 'AIzaSyD4aWYLz2H8Uj01k-nAms54leSannJEDhA';
-
+      $apiKey = MAPS_API;
       // Styles
       $version = wp_get_theme()->get('Version'); //Updates version from style.css
       wp_enqueue_style( 'baskervville-google-fonts', 'https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap', false ); 
